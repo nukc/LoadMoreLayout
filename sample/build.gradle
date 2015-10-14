@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.nukc.loadmorelayout"
+        applicationId "com.nukc.loadmorelayout.sample"
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1

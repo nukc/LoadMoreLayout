@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.nukc.library.LoadMoreLayout;
+import com.nukc.loadmorelayout.LoadMoreLayout;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,15 +20,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.nukc.loadmorelayout.R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(com.nukc.loadmorelayout.R.id.recyclerView);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         SampleAdapter sampleAdapter = new SampleAdapter(this);
         recyclerView.setAdapter(sampleAdapter);
 
-        mLoadMoreLayout = (LoadMoreLayout) findViewById(com.nukc.loadmorelayout.R.id.loadMoreLayout);
+        mLoadMoreLayout = (LoadMoreLayout) findViewById(R.id.loadMoreLayout);
         mLoadMoreLayout.setOnLoadMoreListener(new LoadMoreLayout.OnLoadMoreListener() {
             @Override
             public void onLoadMore() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View view = mInflater.inflate(com.nukc.loadmorelayout.R.layout.list_item, parent, false);
+            View view = mInflater.inflate(R.layout.list_item, parent, false);
             return new ViewHolder(view);
         }
 
@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
 
             public ViewHolder(View itemView) {
                 super(itemView);
-                bg = itemView.findViewById(com.nukc.loadmorelayout.R.id.bg);
-                image = (ImageView) itemView.findViewById(com.nukc.loadmorelayout.R.id.image);
+                bg = itemView.findViewById(R.id.bg);
+                image = (ImageView) itemView.findViewById(R.id.image);
             }
         }
     }
