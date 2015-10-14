@@ -1,4 +1,4 @@
-package com.nukc.library.util;
+package com.nukc.loadmorelayout.util;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.nukc.library.view;
+package com.nukc.loadmorelayout.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

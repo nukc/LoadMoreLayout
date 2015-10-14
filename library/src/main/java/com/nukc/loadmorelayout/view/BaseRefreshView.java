@@ -1,10 +1,10 @@
-package com.nukc.library.view;
+package com.nukc.loadmorelayout.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import com.nukc.library.LoadMoreLayout;
+import com.nukc.loadmorelayout.LoadMoreLayout;
 
 /**
  * Created by C on 2015/9/27.

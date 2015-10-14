@@ -1,4 +1,4 @@
-package com.nukc.library;
+package com.nukc.loadmorelayout;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -15,8 +15,8 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.AbsListView;
 
-import com.nukc.library.view.BaseRefreshView;
-import com.nukc.library.view.FooterView;
+import com.nukc.loadmorelayout.view.BaseRefreshView;
+import com.nukc.loadmorelayout.view.FooterView;
 
 /**
  * Created by C on 2015/9/27.

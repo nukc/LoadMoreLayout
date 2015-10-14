@@ -1,4 +1,4 @@
-package com.nukc.library.view;
+package com.nukc.loadmorelayout.view;
 
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.view.animation.BounceInterpolator;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
-import com.nukc.library.R;
-import com.nukc.library.util.Utils;
+import com.nukc.loadmorelayout.R;
+import com.nukc.loadmorelayout.util.Utils;
 
 /**
  * Created by C on 2015/9/27.

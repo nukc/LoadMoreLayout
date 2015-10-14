@@ -1,4 +1,4 @@
-package com.nukc.library.view;
+package com.nukc.loadmorelayout.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,7 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.nukc.library.R;
+import com.nukc.loadmorelayout.R;
 
 /**
  * Created by C on 2015/9/27.

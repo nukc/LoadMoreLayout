@@ -1,4 +1,4 @@
-package com.nukc.library;
+package com.nukc.loadmorelayout;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
