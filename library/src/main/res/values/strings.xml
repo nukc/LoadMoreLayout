@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Library</string>
+    
+    <string name="pull_up_to_rain">上拉下雨</string>
+    <string name="let_go_to_rain">松开下雨</string>
+    <string name="raining">下雨中...</string>
+</resources>
