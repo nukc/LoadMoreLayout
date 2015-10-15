@@ -98,7 +98,6 @@ public class FooterView extends BaseRefreshView{
     }
 
     /**
-     * 限定值
      * @param a
      * @param b
      * @return

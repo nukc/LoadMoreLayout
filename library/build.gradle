@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'loadmorelayout'
+
+    publishedGroupId = 'com.github.nukc.loadmorelayout'
+    libraryName = 'loadmorelayout'
+    artifact = 'loadmorelayout'
+
+    libraryDescription = '这是一个上拉加载更多控件，看过用过不少刷新控件，但很多都是只支持下拉刷新，好吧，那就自己做一个吧，支持API 11及以上。'
+
+    siteUrl = 'https://github.com/nukc/LoadMoreLayout'
+    gitUrl = 'https://github.com/nukc/LoadMoreLayout.git'
+
+    libraryVersion = '0.1.0'
+
+    developerId = 'nukc'
+    developerName = 'c'
+    developerEmail = '353932158@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
@@ -8,7 +32,7 @@ android {
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
-        versionName "0.1"
+        versionName "0.1.0"
     }
 }
 
@@ -17,3 +41,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.0.1'
 }
+
+apply from: '../installv1.gradle'
+apply from: '../bintrayv1.gradle'

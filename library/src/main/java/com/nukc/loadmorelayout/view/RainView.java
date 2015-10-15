@@ -16,7 +16,7 @@ import java.util.Random;
  */
 public class RainView extends View {
     private List<Rain> rains;
-    private Random random = new Random();//生成随机数
+    private Random random = new Random();
     private float startY = -20;
     double gradient = 8 * Math.PI / 180;
     float speedY = 25;
