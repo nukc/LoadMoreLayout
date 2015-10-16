@@ -2,12 +2,36 @@
 
   这是一个上拉加载更多控件，看过用过不少刷新控件，但很多都是只支持下拉刷新，好吧，那就自己做一个吧，支持API 11及以上。
 
-# 用法
+## 用法
 
 1. 导入库，出现了点问题，现在还不能直接通过compile的方式导入。
 （Have a problem, and now can not import directly compile way）
 
     ``` compile 'com.github.nukc.loadmorelayout:library:0.1.0' ```
+
+
+  但是可以通过jitPack来compile：
+
+
+  Add it in your build.gradle at the end of repositories:
+  添加如下代码到你的 build.gradle
+  ```
+  repositories {
+        // ...
+        maven { url "https://jitpack.io" }
+    }
+  ```
+
+  Add the dependency in the form
+  添加到你的 dependency 内，如：
+  ```
+  dependencies {
+  	        compile 'com.github.nukc:LoadMoreLayout:1bfd128824'
+  	}
+  ```
+
+  1bfd128824为short commit hash
+
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件
 
@@ -48,7 +72,7 @@
 
 
 
-# Thanks
+## Thanks
 
 * [Yalantis/Phoenix](https://github.com/Yalantis/Phoenix)
 * [android-cjj/BeautifulRefreshLayout](https://github.com/android-cjj/BeautifulRefreshLayout)

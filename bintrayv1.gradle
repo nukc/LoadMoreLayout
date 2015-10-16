@@ -2,40 +2,25 @@ apply plugin: 'com.jfrog.bintray'
 
 version = libraryVersion
 
-//task sourcesJar(type: Jar) {
-//    from android.sourceSets.main.java.srcDirs
-//    classifier = 'sources'
-//}
-//
-//task javadoc(type: Javadoc) {
-//    source = android.sourceSets.main.java.srcDirs
-//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-//}
-//
-//task javadocJar(type: Jar, dependsOn: javadoc) {
-//    classifier = 'javadoc'
-//    from javadoc.destinationDir
-//}
-task androidJavadocs(type: Javadoc) {
-    source = android.sourceSets.main.java.sourceFiles
-}
-
-task androidJavadocsJar(type: Jar) {
-    classifier = 'javadoc'
-    //basename = artifact_id
-    from androidJavadocs.destinationDir
-}
-
-task androidSourcesJar(type: Jar) {
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
     classifier = 'sources'
-    //basename = artifact_id
-    from android.sourceSets.main.java.sourceFiles
 }
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+    options.encoding = 'UTF-8'
+}
+
 artifacts {
-//    archives javadocJar
-//    archives sourcesJar
-    archives androidSourcesJar
-    archives androidJavadocsJar
+    archives javadocJar
+    archives sourcesJar
 }
 
 // Bintray
