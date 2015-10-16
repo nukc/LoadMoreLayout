@@ -4,9 +4,10 @@
 
 # 用法
 
-1. 导入库
+1. 导入库，出现了点问题，现在还不能直接通过compile的方式导入。
+（Have a problem, and now can not import directly compile way）
 
-    ``` compile 'com.nukc.loadmorelayout:library:0.1' ```
+    ``` compile 'com.github.nukc.loadmorelayout:library:0.1.0' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件
 
@@ -42,9 +43,9 @@
 
 可以使用这个方法设置刷新状态：
 
-    ```java
+
         mLoadMoreLayout.setRefreshing(boolean isRefreshing);
-    ```
+
 
 
 # Thanks

@@ -2,9 +2,9 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'loadmorelayout'
+    bintrayName = 'LoadMoreLayout'
 
-    publishedGroupId = 'com.github.nukc.loadmorelayout'
+    publishedGroupId = 'com.github.nukc'
     libraryName = 'loadmorelayout'
     artifact = 'loadmorelayout'
 
@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/nukc/LoadMoreLayout'
     gitUrl = 'https://github.com/nukc/LoadMoreLayout.git'
 
-    libraryVersion = '0.1.0'
+    libraryVersion = '0.1.1'
 
     developerId = 'nukc'
     developerName = 'c'
@@ -32,7 +32,7 @@ android {
         minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
-        versionName "0.1.0"
+        versionName "0.1.1"
     }
 }
 
