@@ -4,51 +4,28 @@
 
 ## 用法
 
-1. 导入库，出现了点问题，现在还不能直接通过compile的方式导入。
-（Have a problem, and now can not import directly compile way）
+1. 导入库:
 
-    ``` compile 'com.github.nukc.loadmorelayout:library:0.1.0' ```
+    ``` compile 'com.github.nukc:library:0.1.2' ```
 
+2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
-  但是可以通过jitPack来compile：
-
-
-  Add it in your build.gradle at the end of repositories:
-  添加如下代码到你的 build.gradle
-  ```
-  repositories {
-        // ...
-        maven { url "https://jitpack.io" }
-    }
-  ```
-
-  Add the dependency in the form
-  添加到你的 dependency 内，如：
-  ```
-  dependencies {
-  	        compile 'com.github.nukc:LoadMoreLayout:1bfd128824'
-  	}
-  ```
-
-  1bfd128824为short commit hash
-
-
-2. 在你的 layout 里添加 LoadMoreLayout 控件
-
- 	```xml
-     <com.nukc.library.LoadMoreLayout
-         android:id="@+id/loadMoreLayout"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent">
-
+	```xml
+    <com.nukc.library.LoadMoreLayout
+             android:id="@+id/loadMoreLayout"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+    
          <android.support.v7.widget.RecyclerView
              android:id="@+id/recyclerView"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="@android:color/white"/>
-     </com.nukc.library.LoadMoreLayout>
-     ```
-3. 引用控件和设置setOnLoadMoreListener
+    </com.nukc.library.LoadMoreLayout>
+    ```
+
+     
+3. 引用控件和设置setOnLoadMoreListener:
 
     ```java
         mLoadMoreLayout = (LoadMoreLayout) findViewById(R.id.loadMoreLayout);
@@ -67,9 +44,9 @@
 
 可以使用这个方法设置刷新状态：
 
-
-        mLoadMoreLayout.setRefreshing(boolean isRefreshing);
-
+```java
+    mLoadMoreLayout.setRefreshing(boolean isRefreshing);
+```
 
 
 ## Thanks
