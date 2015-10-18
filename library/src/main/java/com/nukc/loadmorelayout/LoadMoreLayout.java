@@ -53,8 +53,10 @@ public class LoadMoreLayout extends ViewGroup {
         mRefreshing = false;
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         mDecelerateInterpolator = new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
-        mFooterHeight = getResources().getDimensionPixelSize(R.dimen.view_footer_height);
-        mboundedLoadMore = getResources().getDimensionPixelSize(R.dimen.bounded_load_more);
+        if (!isInEditMode()) {
+            mFooterHeight = getResources().getDimensionPixelSize(R.dimen.view_footer_height);
+            mboundedLoadMore = getResources().getDimensionPixelSize(R.dimen.bounded_load_more);
+        }
     }
 
     @Override

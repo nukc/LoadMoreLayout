@@ -6,7 +6,7 @@
 
 1. 导入库:
 
-    ``` compile 'com.github.nukc:library:0.1.3' ```
+    ``` compile 'com.github.nukc:library:0.2.1' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 

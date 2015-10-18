@@ -30,8 +30,11 @@ public class FooterView extends BaseRefreshView{
     public FooterView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        mHeight = getResources().getDimensionPixelSize(R.dimen.view_footer_height);
-        int rainViewHeight = getResources().getDimensionPixelSize(R.dimen.bounded_load_more);
+        int rainViewHeight = 0;
+        if (!isInEditMode()) {
+            mHeight = getResources().getDimensionPixelSize(R.dimen.view_footer_height);
+            rainViewHeight = getResources().getDimensionPixelSize(R.dimen.bounded_load_more);
+        }
 
         mWaveView = new WaveView(context);
         mWaveView.setmViewHeight(mHeight);
