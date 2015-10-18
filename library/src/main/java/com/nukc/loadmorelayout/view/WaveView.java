@@ -32,9 +32,6 @@ public class WaveView extends View {
     }
 
     private void init() {
-        if (isInEditMode()) {
-            return;
-        }
 
         path = new Path();
         paint = new Paint();
