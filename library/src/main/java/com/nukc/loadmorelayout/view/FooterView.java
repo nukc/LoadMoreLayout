@@ -78,7 +78,7 @@ public class FooterView extends BaseRefreshView{
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                Log.i("anim", "value--->" + (int) animation.getAnimatedValue());
+//                Log.d("anim", "value--->" + (int) animation.getAnimatedValue());
                 mWaveView.setmWaveHeight((int) animation.getAnimatedValue());
                 mWaveView.invalidate();
             }

@@ -123,7 +123,7 @@ public class RainView extends View {
             rain.setY(rain.getY() + rain.getSpeedY());
             Rain nextRain = RainNext(rain,rainlength);
             canvas.drawLine(rain.getX(), rain.getY(), nextRain.getX(), nextRain.getY(), rain.getPaint());
-            Log.i("cjj", "for..." + rain.getX() + " y" + rain.getY() + "  nx+" + nextRain.getX() + "  ny" + nextRain.getY());
+//            Log.d("cjj", "for..." + rain.getX() + " y" + rain.getY() + "  nx+" + nextRain.getX() + "  ny" + nextRain.getY());
         }
 
     }
