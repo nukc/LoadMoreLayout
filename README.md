@@ -11,7 +11,7 @@
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
 	```xml
-    <com.nukc.library.LoadMoreLayout
+    <com.nukc.loadmorelayout.LoadMoreLayout
              android:id="@+id/loadMoreLayout"
              android:layout_width="match_parent"
              android:layout_height="match_parent">
@@ -21,7 +21,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="@android:color/white"/>
-    </com.nukc.library.LoadMoreLayout>
+    </com.nukc.loadmorelayout.LoadMoreLayout>
     ```
 
      
