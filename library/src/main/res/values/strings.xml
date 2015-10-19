@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Library</string>
+    <string name="app_name">LoadMoreLayout</string>
     
     <string name="pull_up_to_load">Pull up to load</string>
     <string name="release_to_load">Release to load</string>

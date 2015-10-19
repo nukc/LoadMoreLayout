@@ -22,10 +22,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        int imgs[] = {
+                R.mipmap.a,
+                R.mipmap.b,
+                R.mipmap.c,
+                R.mipmap.d,
+                R.mipmap.e
+        };
+
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
-        SampleAdapter sampleAdapter = new SampleAdapter(this);
+        SampleAdapter sampleAdapter = new SampleAdapter(this, imgs);
         recyclerView.setAdapter(sampleAdapter);
 
         mLoadMoreLayout = (LoadMoreLayout) findViewById(R.id.loadMoreLayout);
@@ -47,9 +55,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         private final LayoutInflater mInflater;
+        private int imgs[];
 
-        public SampleAdapter(Context context) {
+        public SampleAdapter(Context context, int imgs[]) {
             mInflater = LayoutInflater.from(context);
+            this.imgs = imgs;
         }
 
         @Override
@@ -60,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+            ((ViewHolder) holder).image.setImageResource(imgs[position]);
         }
 
         @Override
