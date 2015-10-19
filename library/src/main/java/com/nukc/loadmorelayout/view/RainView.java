@@ -22,7 +22,7 @@ public class RainView extends View {
     float speedY = 25;
     float rainwidth = 3;
     float rainlength = 15;
-    private boolean isStop = false;
+    private volatile boolean isStop = false;
 
     private Thread mThread;
 
