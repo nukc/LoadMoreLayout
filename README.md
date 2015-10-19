@@ -2,7 +2,7 @@
 
   这是一个上拉加载更多控件，看过用过不少刷新控件，但很多都是只支持下拉刷新，好吧，那就自己做一个吧，支持API 11及以上。
   
-  <img src="https://github.com/nukc/LayoutMoreLayout/raw/master/screenshot/screenshot.png">
+  <img src="https://github.com/nukc/LoadMoreLayout/blob/master/screenshot/screenshot.png">
 
 ## 用法
 
