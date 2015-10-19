@@ -3,7 +3,6 @@ package com.nukc.loadmorelayout.view;
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.animation.BounceInterpolator;
@@ -66,15 +65,15 @@ public class FooterView extends BaseRefreshView{
 
         if(Utils.convertDpToPixel(getContext(), mHeight / 2) > (Utils.convertDpToPixel(getContext(), mHeight / 2) * limitValue(1, fraction)))
         {
-            tvTip.setText(getContext().getString(R.string.pull_up_to_rain));
+            tvTip.setText(getContext().getString(R.string.pull_up_to_load));
         }else
         {
-            tvTip.setText(getContext().getString(R.string.let_go_to_rain));
+            tvTip.setText(getContext().getString(R.string.release_to_load));
         }
     }
 
     public void onLoadMore(){
-        tvTip.setText(getContext().getString(R.string.raining));
+        tvTip.setText(getContext().getString(R.string.loading));
         mRainView.setVisibility(View.VISIBLE);
         mRainView.StartRain();
         ValueAnimator animator = ValueAnimator.ofInt(-mWaveView.getmWaveHeight(), 0, -200, 0, -200, 0);

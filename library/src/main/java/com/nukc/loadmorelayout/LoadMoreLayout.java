@@ -38,6 +38,7 @@ public class LoadMoreLayout extends ViewGroup {
     private int mActivePointerId;
     private boolean mIsBeingDragged;
     private float mInitialMotionY;
+    private boolean mLoadMoreEnabled;
 
 
     public LoadMoreLayout(Context context) {
@@ -50,6 +51,7 @@ public class LoadMoreLayout extends ViewGroup {
         mFooterView = new FooterView(context);
         addView(mFooterView);
 
+        mLoadMoreEnabled = true;
         mRefreshing = false;
         mTouchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         mDecelerateInterpolator = new DecelerateInterpolator(DECELERATE_INTERPOLATION_FACTOR);
@@ -131,7 +133,7 @@ public class LoadMoreLayout extends ViewGroup {
 
                 final float yDiff = y - mInitialMotionY;
 
-                if (yDiff < 0 && !canChildScrollDown() && Math.abs(yDiff) > mTouchSlop){
+                if (mLoadMoreEnabled && yDiff < 0 && !canChildScrollDown() && Math.abs(yDiff) > mTouchSlop){
                     mIsBeingDragged = true;
                 }
                 break;
@@ -168,7 +170,7 @@ public class LoadMoreLayout extends ViewGroup {
                 float offsetY = mDecelerateInterpolator.getInterpolation(yDiff / mFooterHeight / 2) * yDiff / 2;
 
                 if (offsetY < mFooterHeight) {
-                    Log.d("offsetY", offsetY + "---" + yDiff);
+//                    Log.d("offsetY", offsetY + "---" + yDiff);
                     ViewCompat.setTranslationY(mTarget, -offsetY);
                     if (mFooterView != null) {
                         mFooterView.onPulling(offsetY / mboundedLoadMore);
@@ -265,6 +267,14 @@ public class LoadMoreLayout extends ViewGroup {
             return -1;
         }
         return MotionEventCompat.getY(ev, index);
+    }
+
+    public boolean isLoadMoreEnabled() {
+        return mLoadMoreEnabled;
+    }
+
+    public void setLoadMoreEnabled(boolean isLoadMoreEnabled) {
+        this.mLoadMoreEnabled = isLoadMoreEnabled;
     }
 
     public void setOnLoadMoreListener(OnLoadMoreListener listener){
