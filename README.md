@@ -57,10 +57,11 @@
 ##更新日志
 
 ###Version: 0.2.2
-    * 增加设置是否启用上拉加载更多的方法
-    （当与CoordinatorLayout一起结合使用，app:layout_behavior="@string/appbar_scrolling_view_behavior"，
-     且RecyclerView的item太少未占满LoadMoreLayout的时候，CoordinatorLayout的滚动事件无法触发，
-     这时可调用mLoadMoreLayout.setLoadMoreEnabled(false);关闭上拉加载。或者不想使用的时候可自行调用此方法。）
+
+  * 增加设置是否启用上拉加载更多的方法
+   （当与CoordinatorLayout一起结合使用，app:layout_behavior="@string/appbar_scrolling_view_behavior"，
+    且RecyclerView的item太少未占满LoadMoreLayout的时候，CoordinatorLayout的滚动事件无法触发，
+    这时可调用mLoadMoreLayout.setLoadMoreEnabled(false);关闭上拉加载。或者不想使用的时候可自行调用此方法。）
 
 ## Thanks
 
