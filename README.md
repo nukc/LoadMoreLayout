@@ -2,13 +2,13 @@
 
   这是一个上拉加载更多控件，看过用过不少刷新控件，但很多都是只支持下拉刷新，好吧，那就自己做一个吧，支持API 11及以上。
   
-  <img src="https://github.com/nukc/LoadMoreLayout/blob/master/screenshot/screenshot.png">
+  <img src="https://raw.githubusercontent.com/nukc/LoadMoreLayout/master/screenshot/screenshot.png">
 
 ## 用法
 
 1. 导入库:
 
-    ``` compile 'com.github.nukc:library:0.2.3' ```
+    ``` compile 'com.github.nukc:library:0.3.0' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
@@ -57,6 +57,9 @@
 ```
 
 ##更新日志
+
+###Version: 0.3.0
+  * 删除library下strings.xml的app_name，因为与app默认创建的app_name重叠
 
 ###Version: 0.2.2
 
