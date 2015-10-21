@@ -17,6 +17,7 @@ import com.nukc.loadmorelayout.util.Utils;
  */
 public class FooterView extends BaseRefreshView{
     private int mHeight;
+    private int mWaveAnimeHeight;
 
     private RainView mRainView;
     private WaveView mWaveView;
@@ -33,6 +34,7 @@ public class FooterView extends BaseRefreshView{
         if (!isInEditMode()) {
             mHeight = getResources().getDimensionPixelSize(R.dimen.view_footer_height);
             rainViewHeight = getResources().getDimensionPixelSize(R.dimen.bounded_load_more);
+            mWaveAnimeHeight = -mHeight >> 2;
         }
 
         mWaveView = new WaveView(context);
@@ -76,7 +78,7 @@ public class FooterView extends BaseRefreshView{
         tvTip.setText(getContext().getString(R.string.loading));
         mRainView.setVisibility(View.VISIBLE);
         mRainView.StartRain();
-        ValueAnimator animator = ValueAnimator.ofInt(-mWaveView.getmWaveHeight(), 0, -200, 0, -200, 0);
+        ValueAnimator animator = ValueAnimator.ofInt(-mWaveView.getmWaveHeight(), 0, mWaveAnimeHeight, 0, mWaveAnimeHeight, 0);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {

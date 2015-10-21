@@ -8,7 +8,7 @@
 
 1. 导入库:
 
-    ``` compile 'com.github.nukc:library:0.3.3' ```
+    ``` compile 'com.github.nukc:library:0.3.5' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
@@ -57,6 +57,9 @@
 ```
 
 ##更新日志
+
+###Veision: 0.3.5
+  * 修改FooterView -> OnLoadMore - > ValueAnimator.ofInt(int... values) 的values值，这里的值直接关联上拉触发后的波动
 
 ###Version: 0.3.3
   * 更改RainView的部分逻辑
