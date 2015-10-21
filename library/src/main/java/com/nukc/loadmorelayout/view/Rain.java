@@ -91,7 +91,7 @@ public class Rain {
             for(int i=0;i<number;i++){
                 clone = clone();
                 clone.getPaint().setStrokeWidth((float) Math.random() * (clone.getW() - 1) + 1);
-                clone.setX((int) Math.random()*getPos());
+                clone.setX((int) Math.random() * getPos());
                 clones.add(clone);
             }
         }catch (CloneNotSupportedException e){

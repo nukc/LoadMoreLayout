@@ -8,7 +8,7 @@
 
 1. 导入库:
 
-    ``` compile 'com.github.nukc:library:0.3.0' ```
+    ``` compile 'com.github.nukc:library:0.3.3' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
@@ -57,6 +57,9 @@
 ```
 
 ##更新日志
+
+###Version: 0.3.3
+  * 更改RainView的部分逻辑
 
 ###Version: 0.3.0
   * 删除library下strings.xml的app_name，因为与app默认创建的app_name重叠
