@@ -6,6 +6,8 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.nukc.loadmorelayout.util.Utils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -20,8 +22,8 @@ public class RainView extends View {
     private float mStartY = -20;
     double mGradient = 8 * Math.PI / 180;
     float mSpeedY = 25;
-    float mRainWidth = 3;
-    float mRainLength = 15;
+    float mRainWidth;
+    float mRainLength;
     private volatile boolean mIsStop = false;
 
     private volatile Thread mThread;
@@ -36,6 +38,9 @@ public class RainView extends View {
 
         mRains = new ArrayList<>();
         mCopyRains = new ArrayList<>();
+
+        mRainWidth = Utils.convertDpToPixel(context, 1);
+        mRainLength = Utils.convertDpToPixel(context, 8);
     }
 
     public void StartRain()
