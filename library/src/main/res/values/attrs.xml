@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RefreshView">
+        <attr name="style" format="enum">
+            <enum name="rain" value="0" />
+            <enum name="text" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

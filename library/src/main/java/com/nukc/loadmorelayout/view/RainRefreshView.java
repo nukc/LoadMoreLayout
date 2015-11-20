@@ -15,7 +15,7 @@ import com.nukc.loadmorelayout.util.Utils;
 /**
  * Created by C on 2015/9/27.
  */
-public class FooterView extends BaseRefreshView{
+public class RainRefreshView extends BaseRefreshView {
     private int mHeight;
     private int mWaveAnimeHeight;
 
@@ -23,11 +23,11 @@ public class FooterView extends BaseRefreshView{
     private WaveView mWaveView;
     private TextView tvTip;
 
-    public FooterView(Context context) {
+    public RainRefreshView(Context context) {
         this(context, null);
     }
 
-    public FooterView(Context context, AttributeSet attrs) {
+    public RainRefreshView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         int rainViewHeight = 0;
@@ -60,25 +60,23 @@ public class FooterView extends BaseRefreshView{
         mRainView.setVisibility(GONE);
     }
 
-    public void onPulling(float fraction){
+    public void onPulling(float fraction) {
         mWaveView.setmWaveHeight((int) (mHeight * Math.max(0, fraction - 1)));
 
         mWaveView.invalidate();
 
-        if(Utils.convertDpToPixel(getContext(), mHeight / 2) > (Utils.convertDpToPixel(getContext(), mHeight / 2) * limitValue(1, fraction)))
-        {
+        if (Utils.convertDpToPixel(getContext(), mHeight / 2) > (Utils.convertDpToPixel(getContext(), mHeight / 2) * Utils.limitValue(1, fraction))) {
             tvTip.setText(getContext().getString(R.string.pull_up_to_load));
-        }else
-        {
+        } else {
             tvTip.setText(getContext().getString(R.string.release_to_load));
         }
     }
 
-    public void onLoadMore(){
+    public void onLoadMore() {
         tvTip.setText(getContext().getString(R.string.loading));
         mRainView.setVisibility(View.VISIBLE);
         mRainView.StartRain();
-        ValueAnimator animator = ValueAnimator.ofInt(-mWaveView.getmWaveHeight(), 0, mWaveAnimeHeight, 0, mWaveAnimeHeight, 0);
+        ValueAnimator animator = ValueAnimator.ofInt(-mWaveView.getmWaveHeight(), 0, mWaveAnimeHeight, 0);
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
@@ -91,28 +89,14 @@ public class FooterView extends BaseRefreshView{
         animator.setDuration(1000);
         animator.start();
 
-        if (mListener != null){
+        if (mListener != null) {
             mListener.onLoadMore();
         }
     }
 
-    public void stop(){
+    public void stop() {
         mRainView.stopRain();
-        tvTip.setText("");
-    }
-
-    /**
-     * @param a
-     * @param b
-     * @return
-     */
-    public float limitValue(float a, float b) {
-        float valve = 0;
-        final float min = Math.min(a, b);
-        final float max = Math.max(a, b);
-        valve = valve > min ? valve : min;
-        valve = valve < max ? valve : max;
-        return valve;
+        tvTip.setText(null);
     }
 
 }

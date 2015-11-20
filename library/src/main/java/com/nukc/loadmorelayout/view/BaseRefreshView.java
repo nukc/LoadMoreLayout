@@ -26,7 +26,7 @@ public abstract class BaseRefreshView extends FrameLayout {
 
     public abstract void stop();
 
-    public void setListener(LoadMoreLayout.OnLoadMoreListener Listener){
+    public void setListener(LoadMoreLayout.OnLoadMoreListener Listener) {
         this.mListener = Listener;
     }
 

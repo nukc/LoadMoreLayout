@@ -83,18 +83,19 @@ public class Rain {
         }
         return rain;
     }
-    public List<Rain> clone(int number){
+
+    public List<Rain> clone(int number) {
         List<Rain> clones = null;
         Rain clone;
         try {
             clones = new ArrayList<>();
-            for(int i=0;i<number;i++){
+            for (int i = 0; i < number; i++) {
                 clone = clone();
                 clone.getPaint().setStrokeWidth((float) Math.random() * (clone.getW() - 1) + 1);
                 clone.setX((int) Math.random() * getPos());
                 clones.add(clone);
             }
-        }catch (CloneNotSupportedException e){
+        } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
         return clones;

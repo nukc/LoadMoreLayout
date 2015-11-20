@@ -43,8 +43,7 @@ public class RainView extends View {
         mRainLength = Utils.convertDpToPixel(context, 8);
     }
 
-    public void StartRain()
-    {
+    public void StartRain() {
         mIsStop = false;
         mThread = new Thread(new Runnable() {
             @Override
@@ -101,20 +100,20 @@ public class RainView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        if(mRains == null || mRains.size() <= 0) {
+        if (mRains == null || mRains.size() <= 0) {
             return;
         }
 
         mCopyRains.clear();
         mCopyRains.addAll(mRains);
-        for(Rain rain : mCopyRains) {
-            if(rain == null) return;
+        for (Rain rain : mCopyRains) {
+            if (rain == null) return;
 
             if (rain.getX() <= 0) {
                 mRains.remove(rain);
             } else if (rain.getX() >= getWidth()) {
                 mRains.remove(rain);
-            } else if(rain.getY() > mStartY + getHeight()) {
+            } else if (rain.getY() > mStartY + getHeight()) {
                 mRains.remove(rain);
             }
 

@@ -10,7 +10,7 @@
 
 1. 导入库:
 
-    ``` compile 'com.github.nukc:library:0.3.6' ```
+    ``` compile 'com.github.nukc:library:0.4.0' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
@@ -58,7 +58,43 @@
     mLoadMoreLayout.setLoadMoreEnabled(boolean isLoadMoreEnabled);
 ```
 
+设置可上拉的最大高度
+
+```java
+    mLoadMoreLayout.setPullMaxHeight(int maxHeight)
+```
+
+设置触发加载的高度
+
+```java
+    mLoadMoreLayout.setBoundedLoadMoreHeight(int boundedHeight)
+```
+
+##Customization
+
+新增了个纯文本展示的刷新视图（TextRefreshView）,有2种方法进行更换:
+```java
+    mLoadMoreLayout.setRefreshView(new TextRefreshView(this));
+```
+或
+```xml
+    <com.nukc.loadmorelayout.LoadMoreLayout
+        ......
+        app:style="text"
+    />
+```
+
+set custom refresh view 
+设置自定义刷新视图（一个继承BaseRefreshView的视图），可以参考RainRefreshView和TextRefreshView。
+```java
+    mLoadMoreLayout.setRefreshView(BaseRefreshView refreshView);
+```
+
+
 ##更新日志
+
+###Version: 0.4.0
+  * 新增刷新视图，增加可定制性
 
 ###Veision: 0.3.5
   * 修改FooterView -> OnLoadMore - > ValueAnimator.ofInt(int... values) 的values值，这里的值直接关联上拉触发后的波动

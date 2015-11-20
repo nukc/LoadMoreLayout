@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.nukc.loadmorelayout.LoadMoreLayout;
+import com.nukc.loadmorelayout.view.TextRefreshView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(sampleAdapter);
 
         mLoadMoreLayout = (LoadMoreLayout) findViewById(R.id.loadMoreLayout);
+//        mLoadMoreLayout.setRefreshView(new TextRefreshView(this));
         mLoadMoreLayout.setOnLoadMoreListener(new LoadMoreLayout.OnLoadMoreListener() {
             @Override
             public void onLoadMore() {
@@ -45,14 +47,13 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         mLoadMoreLayout.setRefreshing(false);
                     }
-                }, 3000);
+                }, 2000);
             }
         });
     }
 
 
     static class SampleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
-
 
         private final LayoutInflater mInflater;
         private int imgs[];
