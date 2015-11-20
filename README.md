@@ -72,7 +72,7 @@
 
 ##Customization
 
-新增了个纯文本展示的刷新视图（TextRefreshView）,有2种方法进行更换:
+新增了个纯文本展示的刷新视图（TextRefreshView）,有2种方法进行设置:
 ```java
     mLoadMoreLayout.setRefreshView(new TextRefreshView(this));
 ```
