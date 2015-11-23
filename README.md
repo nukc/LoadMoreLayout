@@ -6,11 +6,11 @@
   
   <img src="https://raw.githubusercontent.com/nukc/LoadMoreLayout/master/screenshot/sample.gif">
 
-## 用法
+## Usage
 
 1. 导入库:
 
-    ``` compile 'com.github.nukc:library:0.4.0' ```
+    ``` compile 'com.github.nukc:library:0.4.1' ```
 
 2. 在你的 layout 里添加 LoadMoreLayout 控件:
 
@@ -91,7 +91,7 @@ set custom refresh view
 ```
 
 
-##更新日志
+##Changelog
 
 ###Version: 0.4.0
   * 新增刷新视图，增加可定制性

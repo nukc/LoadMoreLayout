@@ -187,12 +187,10 @@ public class LoadMoreLayout extends ViewGroup {
                 final float y = MotionEventCompat.getY(ev, pointerIndex);
                 final float yDiff = Math.abs(y - mInitialMotionY);
 
-                Log.d("Interpolation", "Interpolation=" + mDecelerateInterpolator.getInterpolation(yDiff / mPullMaxHeight / 2));
-
                 float offsetY = mDecelerateInterpolator.getInterpolation(yDiff / mPullMaxHeight / 2) * yDiff / 2;
 
                 if (offsetY < mPullMaxHeight && offsetY >= 0) {
-                    Log.d("offsetY", offsetY + "<--->" + yDiff + "<-->" + mPullMaxHeight);
+//                    Log.d("offsetY", offsetY + "<--->" + yDiff + "<-->" + mPullMaxHeight);
                     ViewCompat.setTranslationY(mTarget, -offsetY);
                     if (mFooterRefreshView != null) {
                         mFooterRefreshView.onPulling(offsetY / mBoundedLoadMoreHeight);

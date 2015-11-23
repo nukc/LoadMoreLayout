@@ -19,8 +19,8 @@ public class WaveView extends View {
     private int mWaveHeight;
     private int mMinHeight;
 
-    Path path;
-    Paint paint;
+    private Path mPath;
+    private Paint mPaint;
 
     public WaveView(Context context) {
         this(context, null);
@@ -32,11 +32,10 @@ public class WaveView extends View {
     }
 
     private void init() {
-
-        path = new Path();
-        paint = new Paint();
-        paint.setColor(Color.argb(150, 43, 43, 43));
-        paint.setAntiAlias(true);
+        mPath = new Path();
+        mPaint = new Paint();
+        mPaint.setColor(Color.argb(150, 43, 43, 43));
+        mPaint.setAntiAlias(true);
         setBackgroundResource(R.drawable.bg);
     }
 
@@ -44,13 +43,13 @@ public class WaveView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        path.reset();
-        path.moveTo(0, mViewHeight);
-        path.lineTo(0, mMinHeight);
-        path.quadTo(getMeasuredWidth() / 2, mMinHeight - mWaveHeight, getMeasuredWidth(), mMinHeight);
-        path.lineTo(getMeasuredWidth(), mViewHeight);
+        mPath.reset();
+        mPath.moveTo(0, mViewHeight);
+        mPath.lineTo(0, mMinHeight);
+        mPath.quadTo(getMeasuredWidth() / 2, mMinHeight - mWaveHeight, getMeasuredWidth(), mMinHeight);
+        mPath.lineTo(getMeasuredWidth(), mViewHeight);
 
-        canvas.drawPath(path, paint);
+        canvas.drawPath(mPath, mPaint);
     }
 
     public int getmWaveHeight() {

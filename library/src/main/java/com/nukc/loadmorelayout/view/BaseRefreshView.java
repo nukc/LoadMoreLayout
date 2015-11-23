@@ -20,10 +20,20 @@ public abstract class BaseRefreshView extends FrameLayout {
         super(context, attrs);
     }
 
+    /**
+     * 上拉比例(offsetY / mBoundedLoadMoreHeight)
+     * @param fraction
+     */
     public abstract void onPulling(float fraction);
 
+    /**
+     * 正在加载
+     */
     public abstract void onLoadMore();
 
+    /**
+     * 停止刷新
+     */
     public abstract void stop();
 
     public void setListener(LoadMoreLayout.OnLoadMoreListener Listener) {

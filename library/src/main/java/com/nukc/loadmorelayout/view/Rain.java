@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by C on 2015/9/27.
+ * Created by CJJ.
  */
 public class Rain {
     private Paint paint;
