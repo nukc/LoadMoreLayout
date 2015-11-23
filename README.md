@@ -85,7 +85,7 @@
 ```
 
 set custom refresh view 
-设置自定义刷新视图（一个继承BaseRefreshView的视图），可以参考RainRefreshView和TextRefreshView。
+设置自定义刷新视图（一个继承BaseRefreshView的视图），可以参考[RainRefreshView](https://github.com/nukc/LoadMoreLayout/blob/master/library/src/main/java/com/nukc/loadmorelayout/view/RainRefreshView.java)和[TextRefreshView](https://github.com/nukc/LoadMoreLayout/blob/master/library/src/main/java/com/nukc/loadmorelayout/view/TextRefreshView.java)。
 ```java
     mLoadMoreLayout.setRefreshView(BaseRefreshView refreshView);
 ```
