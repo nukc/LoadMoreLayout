@@ -4,7 +4,7 @@
   
   <img src="https://raw.githubusercontent.com/nukc/LoadMoreLayout/master/screenshot/screenshot.png">
   
-  <img src="https://raw.githubusercontent.com/nukc/LoadMoreLayout/master/screenshot/sample.gif">
+  <img src="https://raw.githubusercontent.com/nukc/LoadMoreLayout/master/screenshot/sample1.gif">
 
 ## Usage
 
